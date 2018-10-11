@@ -1,0 +1,221 @@
+/* global styles */
+
+body {
+    background: #fffeed;
+    color: green;
+    position: relative;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* header styles */
+
+#nav-links {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.nav-left {
+    width: 191.02px;
+}
+
+.nav-right {
+    display: flex;
+}
+
+.nav-right a {
+    color: green;
+}
+
+#logout, #cuid {
+    margin: 0 20px;
+    font-size: 0.8rem;
+}
+
+/* main styles */
+
+.row {
+    margin: 0 auto;
+    justify-content: center;
+}
+
+label[for=sourceSystem], label[for=orderNumber] {
+    margin-left: 15px;
+    margin-right: 3px;
+}
+
+select { 
+    width: 400px; 
+    text-align-last:center; 
+}
+
+#sourceSystem {
+    text-transform: none;
+    height: 2.0rem;
+    margin-top: 20px;
+    width: 150px;
+    font-size: 0.9rem;
+    outline-color: green;
+}
+
+#orderNumber {
+    height: 2.0rem;
+    margin-top: 20px;
+    width: 150px;
+    font-size: 0.9rem;
+    text-align: center;
+    outline-color: green;
+}
+
+#submitBtn {
+    height: 2.0rem;
+    margin-top: 20px;
+    width: 75px;
+    font-size: 0.9rem;
+    margin-left: 15px;
+    color: white;
+    background: rgb(10, 180, 10);
+    border: 1px solid transparent;
+    transition: 0.2s ease;
+    border-radius: 5px;
+}
+
+#submitBtn:hover {
+    background: rgb(3, 138, 3);
+    border: 1px solid black;
+}
+
+#systemMessage {
+    margin: 10px 0;
+    font-size: 0.7rem;
+    color: red; /* transparent! */
+}
+
+/* table styles */
+
+#main-content {
+    background: #d4ffcc;
+    height: 400px;
+    width: 500px;
+    color: black; /* remove!! */
+}
+
+.content-header-text {
+    margin: 10px 0;
+    padding: 7px;
+    text-shadow: 0.5px 0.5px blac
+}
+
+.dueDates {
+    border: 1px solid black;
+    padding: 5px 10px;
+}
+
+.dateRow {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    width: 150px;
+}
+
+.dateRow p {
+    font-size: 0.7rem;
+}
+
+table {
+    color: black;
+    table-layout: fixed;
+    width: 100%;
+    border-collapse: collapse;
+    border: 3px solid black;
+}
+
+td {
+    border: 1px solid black;
+    padding: 0.5% 1%;
+}
+
+tr:nth-last-of-type(odd) {
+    background: floralwhite;
+}
+
+#moreDetailsBtn {
+        height: 2.0rem;
+        margin-top: 20px;
+        width: 100px;
+        font-size: 0.9rem;
+        color: white;
+        background: rgb(10, 180, 10);
+        border: 1px solid transparent;
+        transition: 0.2s ease;
+        border-radius: 5px;
+}
+
+#moreDetailsBtn:hover {
+    background: rgb(3, 138, 3);
+    border: 1px solid black;
+}
+
+/* footer styles */
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    color: white;
+    width: 100%;
+    background: green;
+}
+
+footer p  {
+    font-size: 0.8rem;
+}
+
+
+
+#modalWindow {
+    margin-top: -50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fffeed;
+    height: 150px;
+    width: 475px;
+    position: relative;
+    border: 2px solid black;
+}
+
+#modal-close {
+    position: absolute;
+    bottom: 0;
+    left: 45%;
+    margin-bottom: 5px;
+    height: 1.5rem;
+    width: 75px;
+    font-size: 0.9rem;
+    color: white;
+    background: rgb(211, 3, 3);
+    border: 1px solid transparent;
+    transition: 0.2s ease;
+    border-radius: 5px;
+}
+
+.additionalInputs img {
+    width: 100%;
+}
+
+.additionalInputs button {
+    width: 25px;
+    padding: 0;
+    margin: 0;
+    margin-right: 2px;
+    padding: 3px;
+}
+
+.additionalInputs .add-delete {
+    display: flex;
+    margin-top: 3px;
+}
+
