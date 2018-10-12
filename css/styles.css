@@ -45,7 +45,7 @@ label[for=sourceSystem], label[for=orderNumber] {
 }
 
 select { 
-    width: 400px; 
+    width: 100px; 
     text-align-last:center; 
 }
 
@@ -221,5 +221,16 @@ footer p  {
 .additionalInputs .add-delete {
     display: flex;
     margin-top: 3px;
+}
+
+#wiringCheckbox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 3px;
+}
+
+label {
+    margin-bottom: 0;
 }
 
