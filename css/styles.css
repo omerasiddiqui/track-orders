@@ -88,7 +88,7 @@ select {
 #systemMessage {
     margin: 10px 0;
     font-size: 0.7rem;
-    color: red; /* transparent! */
+    color: green; /* transparent! */
 }
 
 /* table styles */
@@ -200,6 +200,10 @@ footer p  {
     border: 1px solid transparent;
     transition: 0.2s ease;
     border-radius: 5px;
+}
+
+.additionalInputs {
+    margin: 0;
 }
 
 .additionalInputs img {

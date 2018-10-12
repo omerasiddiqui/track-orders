@@ -7,14 +7,29 @@ var sourceSystem = $("#sourceSystem"),
     deleteRow = $(".deleteRow"),
     addRow = $(".addRow");
 
-    var item = `<div class="moreInfo" style="display: flex; justify-content: center; margin-top: 3px"><div class="add-delete"><button onclick="deleteInputRow();" class="deleteRow"><img src="assets/delete-icon.png" alt="delete button"></button><button onclick="addInputRow()" class="addRow"><img src="assets/add-icon.png" alt="add button"></button></div><input type="text"><input type="text"><input type="text"><input type="submit"></div>`;
+    // var item = `<li id=${id} class="moreInfo" style="display: flex; justify-content: center; margin-top: 3px"><div class="add-delete"><button class="deleteRow"><img src="assets/delete-icon.png" alt="delete button"></button><button onclick="addInputRow()" class="addRow"><img src="assets/add-icon.png" alt="add button"></button></div><input placeholder="City" type="text"><input placeholder="State" type="text"><input placeholder="Location ID" type="text"><input type="submit"></li>`;
 
-    const addInputRow = () => $(".additionalInputs").append(item); 
-
-    const deleteInputRow = () =>{
-        $(this).parent().parent().remove();
-        console.log(this)
+    const addInputRow = () => {
+        var item = `<li id="1" class="moreInfo" style="display: flex; justify-content: center; margin-top: 3px"><div class="add-delete"><button class="deleteRow"><img src="assets/delete-icon.png" alt="delete button"></button><button class="addRow"><img src="assets/add-icon.png" alt="add button"></button></div><input placeholder="City" type="text"><input placeholder="State" type="text"><input placeholder="Location ID" type="text"><input type="submit"></li>`;
+        $(".additionalInputs").append(item);
     }
+
+    $(".additionalInputs").on("click", "li .deleteRow", function(e) {
+        e.stopPropagation();
+        console.log($(this).parent().parent())
+        $(this).parent().parent().remove();
+    })
+
+    let id = 2;
+
+    $(".additionalInputs").on("click", "li .addRow", function(e) {
+        e.stopPropagation();
+        var item = `<li id=${id} class="moreInfo" style="display: flex; justify-content: center; margin-top: 3px"><div class="add-delete"><button class="deleteRow"><img src="assets/delete-icon.png" alt="delete button"></button><button class="addRow"><img src="assets/add-icon.png" alt="add button"></button></div><input placeholder="City" type="text"><input placeholder="State" type="text"><input placeholder="Location ID" type="text"><input type="submit"></li>`;
+        $(".additionalInputs").append(item);
+        id++;
+    })
+
+
 
 
     //   document ready
@@ -31,25 +46,17 @@ var sourceSystem = $("#sourceSystem"),
         })
 
         sourceSystem.change(function(){
-            if(!($(this).val() == 'supported')) {
-              $('.additionalInputs').append(item);
+            if(!($(this).val() == 'supported' || $(this).val() == "")) {
+              addInputRow();
+              $("#systemMessage").text("Order Not Available").css("color", "red");
             }
         });
 
-        // $(".additionalInputs").on("click", $("button .deleteRow"), function(e) {
-        //     console.log(e.target);
-        //     console.log($(this).children())
-        //     console.log($(this).children().last())
-
-        //     $(this).children().last().remove()
-
-        // })
+        sourceSystem.change(function(){
+            if(($(this).val() == 'supported' || $(this).val() == "")) {
+              $("#systemMessage").text("Order Found").css("color", "green");
+              $(".additionalInputs").empty();
+            }
+        });
             
     })
-
-
-    //  if ($(event.target).is('img.theater')){
-    //      event.stopPropagation();
-    //      return;
-    // }
-    // $('.theater-wrapper').hide();
