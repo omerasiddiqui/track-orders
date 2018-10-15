@@ -1,7 +1,7 @@
 /* global styles */
 
 body {
-    background: #fffeed;
+    background: white;
     color: green;
     position: relative;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -74,15 +74,14 @@ select {
     font-size: 0.9rem;
     margin-left: 15px;
     color: white;
-    background: rgb(10, 180, 10);
+    background: rgb(3, 138, 3);
     border: 1px solid transparent;
     transition: 0.2s ease;
     border-radius: 5px;
 }
 
 #submitBtn:hover {
-    background: rgb(3, 138, 3);
-    border: 1px solid black;
+    text-decoration: underline;
 }
 
 #systemMessage {
@@ -145,15 +144,14 @@ tr:nth-last-of-type(odd) {
         width: 100px;
         font-size: 0.9rem;
         color: white;
-        background: rgb(10, 180, 10);
+        background: rgb(3, 138, 3);
         border: 1px solid transparent;
         transition: 0.2s ease;
         border-radius: 5px;
 }
 
 #moreDetailsBtn:hover {
-    background: rgb(3, 138, 3);
-    border: 1px solid black;
+    text-decoration: underline;
 }
 
 /* footer styles */
