@@ -5,6 +5,7 @@ body {
     color: green;
     position: relative;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1rem;
 }
 
 /* header styles */
@@ -29,7 +30,7 @@ body {
 
 #logout, #cuid {
     margin: 0 20px;
-    font-size: 0.8rem;
+    font-size: 0.9rem;
 }
 
 /* main styles */
@@ -37,6 +38,10 @@ body {
 .row {
     margin: 0 auto;
     justify-content: center;
+}
+
+label {
+    margin-bottom: 0;
 }
 
 label[for=sourceSystem], label[for=orderNumber] {
@@ -47,6 +52,7 @@ label[for=sourceSystem], label[for=orderNumber] {
 select { 
     width: 100px; 
     text-align-last:center; 
+    font-size: 0.8rem;
 }
 
 #sourceSystem {
@@ -93,7 +99,7 @@ select {
 /* table styles */
 
 #main-content {
-    background: #d4ffcc;
+    background: transparent;
     height: 400px;
     width: 500px;
     color: black; /* remove!! */
@@ -108,17 +114,21 @@ select {
 .dueDates {
     border: 1px solid black;
     padding: 5px 10px;
+    background: #d4ffcc;
+    width: 55%;
 }
 
 .dateRow {
     display: flex;
     justify-content: center;
     align-items: baseline;
-    width: 150px;
 }
 
 .dateRow p {
-    font-size: 0.7rem;
+    font-size: 1rem;
+    margin: 0 auto;
+    text-align: right;
+    margin-right: 0;
 }
 
 table {
@@ -154,25 +164,6 @@ tr:nth-last-of-type(odd) {
     text-decoration: underline;
 }
 
-/* footer styles */
-
-footer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    bottom: 0;
-    color: white;
-    width: 100%;
-    background: green;
-}
-
-footer p  {
-    font-size: 0.8rem;
-}
-
-
-
 #modalWindow {
     margin-top: -50px;
     display: flex;
@@ -200,8 +191,29 @@ footer p  {
     border-radius: 5px;
 }
 
+/* footer styles */
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    color: white;
+    width: 100%;
+    background: green;
+}
+
+footer p  {
+    font-size: 0.8rem;
+}
+
+/* additional inputs */
+
 .additionalInputs {
     margin: 0;
+    margin-top: 3px;
+    padding: 5px;
 }
 
 .additionalInputs img {
@@ -209,16 +221,34 @@ footer p  {
 }
 
 .additionalInputs button {
-    width: 25px;
+    width: 22px;
     padding: 0;
     margin: 0;
     margin-right: 2px;
     padding: 3px;
 }
 
+.additionalInputs li {
+    border: 1px solid black;
+    padding: 3%;
+    position: relative;
+    flex-direction: column;
+    padding: 5% 2% 2%;
+    width: 550px;
+}
+
+.additionalInputs select {
+    margin: 5px auto;
+    width: 100%;
+}
+
 .additionalInputs .add-delete {
     display: flex;
-    margin-top: 3px;
+    justify-content: center;
+    margin-top: 2px;
+    position: absolute;
+    top: 0;
+    right: 0;
 }
 
 #wiringCheckbox {
@@ -228,7 +258,44 @@ footer p  {
     margin-left: 3px;
 }
 
-label {
-    margin-bottom: 0;
+#wiringCheckbox label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 0.9rem;
 }
 
+.locationId {    
+    font-size: 0.7rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding-left: 2px;
+    padding-top: 2px;
+}
+
+.additionalInputsTopRow label:nth-of-type(2), .additionalInputsBottomRow label:nth-of-type(2) {
+    margin-left: 5px;
+}
+
+.additionalInputsTopRow, .additionalInputsBottomRow {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.inputItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 200px;
+}
+
+.inputItem div:nth-of-type(odd) {
+    margin-left: 10px;
+}
+
+.additionalInputs label {
+    margin-right: 5px;
+}
